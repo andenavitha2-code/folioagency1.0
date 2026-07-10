@@ -281,7 +281,7 @@ const Work = () => {
       <div className="flex justify-center">
 
         <img
-          src="/assests/work 2.png"
+          src="/assests/work-2.png"
           alt="Overview"
           className="
             w-full
