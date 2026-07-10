@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const [active, setActive]=
+  useState("");
   return (
     <footer id="footer" className="bg-white py-14 sm:py-16 lg:py-20">
 
@@ -31,20 +33,45 @@ const Footer = () => {
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-8 sm:gap-10 mt-10 text-black font-medium">
 
-          <a href="#whoarewe" className="hover:text-gray-500 transition">
+          <a href="#whoarewe"
+          onClick={() => setActive("about")}
+           className={`transition ${
+            active === "about"
+            ? "text-blue-600 font-semibold"
+            : "hover:text-gray-500"
+           }`}>
             About
           </a>
 
-          <a href="#whatwedo" className="hover:text-gray-500 transition">
+          <a href="#whatwedo" 
+          onClick={() => setActive("work")}
+           className={`transition ${
+            active === "work"
+            ? "text-blue-600 font-semibold"
+            : "hover:text-gray-500"
+           }`}>
             Work
           </a>
 
-          <a href="#partnership" className="hover:text-gray-500 transition">
+          <a href="#partnership" 
+          onClick={() => setActive("services")}
+           className={`transition ${
+            active === "services"
+            ? "text-blue-600 font-semibold"
+            : "hover:text-gray-500"
+           }`}>
             Services
           </a>
 
-          <a href="#wearehiring" className="hover:text-gray-500 transition">
+          <a href="#wearehiring"
+          onClick={() => setActive("jobs")}
+           className={`transition ${
+            active === "jobs"
+            ? "text-blue-600 font-semibold"
+            : "hover:text-gray-500"
+           }`}>
             Jobs
+        
           </a>
 
         </div>

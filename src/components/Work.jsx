@@ -421,7 +421,7 @@ const Work = () => {
         <div className="flex items-center gap-4">
 
           <img
-            src="/assests/logo 2.png"
+            src="/assests/logo-2.png"
             alt=""
             className="w-6 h-6 object-contain"
           />
@@ -1138,7 +1138,7 @@ const Work = () => {
       <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
 
         <img
-          src="/assests/bento 3D illustration.png"
+          src="/assests/bento-3d-illustration.png"
           alt=""
           className="w-full h-72 object-contain bg-white"
         />
@@ -1166,7 +1166,7 @@ const Work = () => {
       <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
 
         <img
-          src="/assests/bento vol 3.png"
+          src="/assests/bento-vol-3.png"
           alt=""
           className="w-full h-72 object-contain bg-white"
         />

@@ -4,6 +4,7 @@ import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Stand = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [active, setActive] = useState("about");
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       
@@ -27,32 +28,48 @@ const Stand = () => {
 
     {/* Desktop Menu */}
     <div className="hidden md:flex items-center space-x-14">
-      <a href="#whoarewe" className="text-gray-500 hover:text-black transition">
-        About
-      </a>
 
-      <Link
-        to="/work"
-        className="text-gray-500 hover:text-black transition"
-      >
-        Work
-      </Link>
+  <a
+    href="#whoarewe"
+    onClick={() => setActive("about")}
+    className={`${active === "about" ? "text-blue-600 font-semibold" : "text-gray-500"} hover:text-black transition`}
+  >
+    About
+  </a>
 
-      <a href="#whatwedo" className="text-gray-500 hover:text-black transition">
-        Services
-      </a>
+  <Link
+  to="/work"
+  className={`${active === "work" ? "text-blue-600 font-semibold" : "text-gray-500"} hover:text-black transition`}
+  onClick={() => setActive("work")}
+>
+  Work
+</Link>
 
-      <a href="#wearehiring" className="text-gray-500 hover:text-black transition">
-        Jobs
-      </a>
+  <a
+    href="#partnership"
+    onClick={() => setActive("services")}
+    className={`${active === "services" ? "text-blue-600 font-semibold" : "text-gray-500"} hover:text-black transition`}
+  >
+    Services
+  </a>
 
-      <a
-      href="#footer"
-      className="bg-black text-white px-6 py-2.5 rounded hover:bg-gray-800 transition"
-      >
-  Contact Us
-</a>
-    </div>
+  <a
+    href="#wearehiring"
+    onClick={() => setActive("jobs")}
+    className={`${active === "jobs" ? "text-blue-600 font-semibold" : "text-gray-500"} hover:text-black transition flex items-center gap-1`}
+  >
+    Jobs
+    <img src="/assests/badge.png" alt="Badge" className="w-5 h-5" />
+  </a>
+
+  <a
+    href="#footer"
+    className="bg-black text-white px-6 py-2.5 rounded hover:bg-gray-800 transition"
+  >
+    Contact Us
+  </a>
+
+</div>
 
     {/* Mobile Button */}
     <button
@@ -93,25 +110,28 @@ const Stand = () => {
     backgroundImage: "url('/assests/overview.png')",
   }}
 >
-    <div className=" text-white flex flex-col px-6 py-4 space-y-5">
+    <div className="text-white flex flex-col px-6 py-4 space-y-5">
 
-      <Link to="/work" onClick={() => setMenuOpen(false)}>
-        Work
-      </Link>
+  <a href="#whoarewe" onClick={() => setMenuOpen(false)}>
+    About
+  </a>
 
-       <a href="#whoarewe" onClick={() => setMenuOpen(false)}>
-        About
-      </a>
+  <Link
+    to="/work"
+    onClick={() => setMenuOpen(false)}
+  >
+    Work
+  </Link>
 
-      <a href="#whatwedo" onClick={() => setMenuOpen(false)}>
-        Services
-      </a>
+  <a href="#partnership" onClick={() => setMenuOpen(false)}>
+    Services
+  </a>
 
-      <a href="#wearehiring" onClick={() => setMenuOpen(false)}>
-        Jobs
-      </a>
+  <a href="#wearehiring" onClick={() => setMenuOpen(false)}>
+    Jobs
+  </a>
 
-    </div>
+</div>
 {/* Social Icons */}
 <div className="mt-auto flex justify-end gap-6 pr-6 pb-6 pt-10">
   <a
